@@ -4,7 +4,7 @@ import 'dart:typed_data';
 
 import 'package:guess_the_number/helpers/checker.dart';
 import 'package:guess_the_number/helpers/model.dart';
-import 'package:wifi/wifi.dart';
+// import 'package:wifi/wifi.dart';
 
 class Role {
   Socket socket;
@@ -16,7 +16,7 @@ class Role {
   Model self;
   String guessed;
   String role;
-  List<WifiResult> hosts;
+  // List<WifiResult> hosts;
 
   Role() {
     this.receiving = false;
@@ -30,12 +30,12 @@ class Role {
     this.makeListening();
   }
 
-  void getHosts() async {
-    Wifi.list("").then((value) {
-      hosts = value;
-      print(hosts);
-    });
-  }
+  // void getHosts() async {
+  //   Wifi.list("").then((value) {
+  //     hosts = value;
+  //     print(hosts);
+  //   });
+  // }
 
   Future<void> makeServer() async {
     this.role = "Server";
